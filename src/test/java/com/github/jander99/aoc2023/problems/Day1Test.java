@@ -31,12 +31,12 @@ public class Day1Test {
     public void partOne() {
 
         Day1 day1 = new Day1();
-        boolean filtered = false;
+        boolean readSpelledDigits = false;
 
-        Integer testCalibrationSum = day1.calibrationSum(test1InputList, filtered);
+        Integer testCalibrationSum = day1.calibrationSum(test1InputList, readSpelledDigits);
         assertEquals(142, testCalibrationSum);
 
-        Integer realCalibrationSum = day1.calibrationSum(realInputList, filtered);
+        Integer realCalibrationSum = day1.calibrationSum(realInputList, readSpelledDigits);
         log.info("Day 1, Part 1: {}", realCalibrationSum);
 
         // Answer
@@ -46,24 +46,15 @@ public class Day1Test {
     @Test
     public void partTwo() {
         Day1 day1 = new Day1();
-        boolean filtered = true;
+        boolean readSpelledDigits = true;
 
-        Integer testCalibrationSum = day1.calibrationSum(test2InputList, filtered);
+        Integer testCalibrationSum = day1.calibrationSum(test2InputList, readSpelledDigits);
         assertEquals(281, testCalibrationSum);
 
-        Integer realCalibrationSum = day1.calibrationSum(realInputList, filtered);
+        Integer realCalibrationSum = day1.calibrationSum(realInputList, readSpelledDigits);
         log.info("Day 1, Part 2: {}", realCalibrationSum);
 
         // Answer
         assertEquals(55358, realCalibrationSum);
-    }
-
-    @Test
-    public void testReplaceWordsWithDigits() {
-
-        Day1 day1 = new Day1();
-
-        String converted = day1.replaceWordsWithDigits("xtqtwoneeightlvcjqfourckfour2nine");
-        assertEquals("xtq2ne8lvcjq4ck429", converted);
     }
 }
