@@ -5,8 +5,6 @@ import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
 public class Day3 {
