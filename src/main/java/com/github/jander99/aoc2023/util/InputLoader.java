@@ -39,4 +39,24 @@ public class InputLoader {
                 .boxed()
                 .collect(Collectors.toList());
     }
+
+    public static char[][] readCharacterArrayFromInputFile(String file) {
+
+        List<String> fileLines = readLinesFromInputFile(file);
+
+        int rows = fileLines.size();
+        int cols = fileLines.get(0).length();
+
+
+        char[][] charArray = new char[rows][cols];
+
+        for (int i=0; i < rows; i++) {
+            String line = fileLines.get(i);
+            for ( int j =0; j < cols; j++) {
+                charArray[i][j] = line.charAt(j);
+            }
+        }
+
+        return charArray;
+    }
 }
